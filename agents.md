@@ -97,6 +97,16 @@ cd config  && go test ./...
 - 已有测试参考：`content_checker_test.go`、`process/process_manager_test.go`、`config/config_test.go`、
   `logger/log_test.go`、`events/events_test.go` 等。
 
+## 开发环境
+
+- 本机 Go：`go1.25.8 windows/amd64`（go.mod 要求 `go 1.24+`，升级依赖时 go 指令会被提升到 1.25）
+- **gh（GitHub CLI）可用**：`gh` 2.89.0，已认证账号 `wxyzh`（keyring 存储 token，scopes: gist/read:org/repo/workflow）
+- 上游仓库：`ochinchina/supervisord`，默认分支 `master`；本地 origin 指向同一仓库（https）
+- 常用 gh 操作：
+  - `gh issue list -R ochinchina/supervisord --state open` 拉取上游 issues
+  - `gh issue view <n> -R ochinchina/supervisord` 查看 issue 详情
+  - Windows 相关 issue 清单见 `docs/windows-issues.md`（Phase 2 工作素材）
+
 ## 项目 Renew 计划
 
 - `RENEW_PLAN.md` — 项目目标、决策记录（ADR）、分阶段任务与验收标准（单模块合并/依赖升级/Windows 审计/TOML 迁移/AI Skills）。

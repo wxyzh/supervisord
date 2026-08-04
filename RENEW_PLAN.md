@@ -66,7 +66,7 @@
 
 | # | Task | 状态 | 验收标准 |
 |---|---|---|---|
-| 2.1 | 拉取 GitHub 上 windows 相关 open/closed issues 清单 | ⬜ | 清单落地到 `docs/windows-issues.md` |
+| 2.1 | 拉取 GitHub 上 windows 相关 open/closed issues 清单 | ✅ | 清单已落地到 `docs/windows-issues.md` |
 | 2.2 | 审计 daemonize_windows.go（守护进程化在 Windows 的行为） | ⬜ | 问题清单 + 修复 |
 | 2.3 | 审计 signals/signal_windows.go（信号映射：CTRL_C/CTRL_BREAK 等） | ⬜ | 问题清单 + 修复 |
 | 2.4 | 审计 zombie_reaper_windows.go（僵尸进程回收在 Windows 为空实现） | ⬜ | 问题清单 + 修复 |
