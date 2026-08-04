@@ -101,10 +101,13 @@ cd config  && go test ./...
 
 - 本机 Go：`go1.25.8 windows/amd64`（go.mod 要求 `go 1.24+`，升级依赖时 go 指令会被提升到 1.25）
 - **gh（GitHub CLI）可用**：`gh` 2.89.0，已认证账号 `wxyzh`（keyring 存储 token，scopes: gist/read:org/repo/workflow）
-- 上游仓库：`ochinchina/supervisord`，默认分支 `master`；本地 origin 指向同一仓库（https）
+- 仓库 remote 布局（已按 fork 工作流配置）：
+  - `origin` = `https://github.com/wxyzh/supervisord.git`（**fork**，唯一的 push 目标）
+  - `upstream` = `https://github.com/ochinchina/supervisord`（原项目，**仅 fetch**；push URL 被设为 `no_push`，禁止误推）
 - 常用 gh 操作：
   - `gh issue list -R ochinchina/supervisord --state open` 拉取上游 issues
   - `gh issue view <n> -R ochinchina/supervisord` 查看 issue 详情
+  - 同步上游：`git fetch upstream && git merge upstream/master`
   - Windows 相关 issue 清单见 `docs/windows-issues.md`（Phase 2 工作素材）
 
 ## 项目 Renew 计划
